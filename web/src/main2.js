@@ -16,7 +16,6 @@ Vue.mixin({
 
     // Note the "data-base-uri" attribute in HTML is transformed in JS to 'baseUri'
     this.baseUri = el.dataset.baseUri;
-    console.log('BaseUri', this.baseUri);
   },
 });
 

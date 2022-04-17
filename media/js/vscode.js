@@ -7,6 +7,8 @@
     // You must hang onto the instance of the VS Code API returned by this method,
     // and hand it out to any other functions that need to use it.
     const vscode = acquireVsCodeApi();
+    // make it accessible from all scripts
+    window.vscode = vscode;
 
     const oldState = /** @type {{ count: number} | undefined} */ (vscode.getState());
 

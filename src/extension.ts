@@ -64,7 +64,7 @@ export function activate(context: vscode.ExtensionContext) {
   // register for sending message from the user (through the extension, e.g. this) to the sidebar webview 
   context.subscriptions.push(
     vscode.commands.registerCommand(
-        'ru-demo.sideApp.sendMessage', async () => {
+        'ru-demo.sidebarApp.sendMessage', async () => {
             if (sidebarProvider) { 
                 await sidebarProvider.sendMessage();
             }

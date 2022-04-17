@@ -9,7 +9,7 @@ function getWebviewOptions(extensionUri: vscode.Uri): vscode.WebviewOptions {
     // And restrict the webview to only loading content from allowed directories.
     localResourceRoots: [
       // for scripts/styles from the extension e.g. VSCode related
-      vscode.Uri.joinPath(extensionUri, "dist-media"),
+      vscode.Uri.joinPath(extensionUri, "media"),
 
       // the output dir of the Vue app
       vscode.Uri.joinPath(extensionUri, "dist-web"),
@@ -190,21 +190,21 @@ export class WebAppPanel {
     // Local path to scripts that should later run in the webview
     const scriptPath = vscode.Uri.joinPath(
       this._extensionUri,
-      "dist-media",
+      "media",
       "js",
-      "main.js"
+      "vscode.js"
     );
 
     // Local path to css styles
     const styleResetPath = vscode.Uri.joinPath(
       this._extensionUri,
-      "dist-media",
+      "media",
       "css",
       "reset.css"
     );
     const stylesVscodePath = vscode.Uri.joinPath(
       this._extensionUri,
-      "dist-media",
+      "media",
       "css",
       "vscode.css"
     );
